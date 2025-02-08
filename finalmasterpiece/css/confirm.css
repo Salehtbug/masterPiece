@@ -1,0 +1,147 @@
+/* General Styling */
+body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C9DDD9;
+    text-align: center;
+    color: black; /* Ensure all text is black */
+}
+
+/* Page Container */
+.page-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Step Progress */
+.step-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+h2{
+    color: black;
+}
+h1{
+    color: black;
+}
+p{
+    color: black;
+}
+
+/* Steps */
+.step {
+    text-align: center;
+    font-size: 16px;
+    color: black; /* Black font */
+    font-weight: bold;
+    position: relative;
+}
+
+/* Circle */
+.circle {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #97A6BA;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto 10px auto;
+}
+
+/* Active Step */
+.step.active .circle {
+    background-color: #1CC59F;
+    border-color: #1CC59F;
+}
+
+/* Filled Circle for completed steps */
+.step.filled .circle {
+    background-color: #4F647A;
+    border-color: #4F647A;
+}
+
+/* Confirmation Section */
+.confirmation-section {
+    margin-top: 30px;
+    font-size: 18px;
+    color: black; /* Black font */
+}
+
+/* Job Details */
+.job-details {
+    text-align: center;
+    margin-bottom: 30px;
+    color: black; /* Black font */
+}
+
+.image-preview {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.image-preview img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+/* Textarea */
+textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+    color: black; /* Black font */
+    background-color: white;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.cancel-btn, .confirm-btn {
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #1CC59F;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #fff;
+    color: #1CC59F;
+}
+
+.cancel-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.confirm-btn {
+    background-color: #1CC59F;
+    color: #fff;
+}
+
+.confirm-btn:hover {
+    background-color: #18a582;
+}

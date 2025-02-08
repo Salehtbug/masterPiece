@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>نشر وظيفة جديدة</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="CSS/post-job.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Header Section -->
+        <header class="header">
+            <img src="images/Tarjim_SignUp-removebg-preview.png" alt="Logo" class="logo">
+            <h1>نشر وظيفة جديدة</h1>
+
+            <!-- Step Progress -->
+            <div class="step-progress">
+                <div class="step active">
+                    <div class="circle"></div>
+                    <p>معلومات الوظيفة</p>
+                </div>
+                <div class="line"></div>
+                <div class="step">
+                    <div class="circle filled"></div>
+                    <p>معلومات الدفع</p>
+                </div>
+                <div class="line"></div>
+                <div class="step">
+                    <div class="circle filled"></div>
+                    <p>التأكيد</p>
+                </div>
+            </div>            
+        </header>
+
+        <!-- Job Posting Form (Placeholder for Now) -->
+        <section class="job-form">
+            <div class="form-section">
+                <div class="input-group">
+                    <label for="fileCategory">صنف الملف</label>
+                    <select id="fileCategory" class="input-field">
+                        <option selected disabled>إختر صنف الملف</option>
+                        <option value="word">ملف وورد</option>
+                        <option value="pdf">ملف PDF</option>
+                        <option value="ppt">ملف بوربوينت</option>
+                        <option value="img">ملف صورة</option>
+                    </select>
+                </div>
+            
+                <div class="input-group">
+                    <label for="translationType">نوع الملف</label>
+                    <select id="translationType" class="input-field">
+                        <option selected disabled>إختر نوع الملف</option>
+                        <option value="legal">قانوني</option>
+                        <option value="medical">طبي</option>
+                        <option value="technical">تقني</option>
+                        <option value="financial">مالي</option>
+                        <option value="academic">أكاديمي</option>
+                        <option value="literary">أدبي</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="upload-language-section">
+
+                <!-- File Upload Area -->
+                <div class="upload-box">
+                    <label for="file-upload">أرفق الملف</label>
+                    <div class="upload-area" onclick="document.getElementById('file-upload').click()">
+                        <img src="imges/Social media signup/Frame 3508.jpg" alt="Upload Icon">
+                        <p><a href="#">Click here</a> to upload or drop files here</p>
+                        <input type="file" id="file-upload" hidden>
+                    </div>
+                </div>
+            
+                <!-- Language Selection -->
+                <div class="language-section">
+                    <label>اللغات</label>
+                    <div class="language-selectors">
+                        <select id="language-from">
+                            <option selected disabled>من</option>
+                            <option value="ar">العربية</option>
+                            <option value="en">الإنجليزية</option>
+                            <option value="fr">الفرنسية</option>
+                        </select>
+            
+                        <select id="language-to">
+                            <option selected disabled>إلى</option>
+                            <option value="ar">العربية</option>
+                            <option value="en">الإنجليزية</option>
+                            <option value="fr">الفرنسية</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <!-- Action Buttons -->
+                <div class="buttons">
+                    <button class="cancel-btn" onclick="cancelAction()">إلغاء</button>
+                    <button class="next-btn" onclick="goToPayment()">التالي</button>
+                </div>
+            </div>
+            
+            
+        </section>
+    </div>
+<script src="js/postjob.js"></script>
+</body>
+</html>

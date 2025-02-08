@@ -1,0 +1,472 @@
+@import url(https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css);
+
+body {
+  font-family: "Baloo Bhai 2";
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  color: black;
+}
+.Contact{
+    color: black;
+}
+:root {
+  --menu-width: 250px; /* Full width */
+  --collapsed-width: 60px; /* Collapsed width */
+}
+
+/* Sidebar Styling */
+aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: var(--collapsed-width);
+  height: 100vh;
+  background: linear-gradient(0deg, white, #00c49b);
+  color: white;
+  box-shadow: 0px 0px 15px 0px #00000073;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Expand Sidebar on Hover */
+aside:hover {
+  width: var(--menu-width);
+}
+
+        /* Button styling */
+        /* #openFormBtn { */
+          /* padding: 10px 20px; */
+          /* font-size: 16px; */
+          /* cursor: pointer; */
+          /* background-color: #007bff; */
+          /* color: white;
+          border: none;
+          border-radius: 5px; */
+      /* } */
+
+      /* #openFormBtn:hover {
+          background-color: #0056b3;
+      } */
+
+      /* Pop-up styling */
+      .popup {
+          display: none; /* Hidden by default */
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+          justify-content: center;
+          align-items: center;
+      }
+
+      .popup-content {
+          background-color: white;
+          padding: 20px;
+          border-radius: 10px;
+          width: 300px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          position: relative;
+          text-align: center;
+      }
+
+      /* Close button styling */
+      .close {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          font-size: 24px;
+          font-weight: bold;
+          cursor: pointer;
+          color: #333;
+      }
+
+      .close:hover {
+          color: red;
+      }
+
+      /* Form styling */
+      form {
+          display: flex;
+          flex-direction: column;
+      }
+
+      label {
+          margin-bottom: 5px;
+          font-weight: bold;
+      }
+
+      input {
+          margin-bottom: 15px;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 50px;
+          font-size: 14px;
+      }
+
+      button[type="submit"] {
+          padding: 10px;
+          background-color: #1CC59F;
+          color: white;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+
+      button[type="submit"]:hover {
+          background-color: white;
+      }
+
+.sidebar-button {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Full-width button inside sidebar */
+.new-job-btn {
+    background-color: #00cc99;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 80%;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Hide the button when the sidebar is collapsed */
+aside:hover .sidebar-button {
+    width: 100%;
+    opacity: 1;
+}
+
+aside:not(:hover) .sidebar-button {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Logo and Branding */
+.logo
+{
+    width: 100%; 
+    text-align: center;
+    padding: 10px 0;
+}
+.logo img {
+    width: 80%; 
+    max-width: 120px;
+    height: auto;
+}
+
+.header--wrapper img
+{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.header--wrapper 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #00c49b;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+
+}
+.header--title
+{
+    color: rgba(113, 99, 186, 255);
+
+}
+.user--info
+{
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search--box
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f1f1f1;
+    padding: 8px 15px;
+    border-radius: 20px;
+    width: 300px;
+}
+.search--box input{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    width: 100%;
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Username Styling */
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+.search--box i
+{
+    font-size: 1.2rem ;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    color: #777;
+}
+.search--box i:hover
+{
+    transform: scale(1.2)
+}
+.fa-magnifying-glass::before, .fa-search::before {
+    content: "";
+    color: #00c49b;
+}
+/* .user--info {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 800px;
+    margin: auto;
+} */
+
+.brand-name {
+  font-size: 20px;
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+  opacity: 0;
+  width: 0;
+}
+
+/* Show brand name when expanded */
+aside:hover .brand-name {
+  opacity: 1;
+  width: auto;
+}
+
+/* Sidebar Menu */
+.menu-items {
+  margin-top: 10px;
+  padding: 0;
+}
+
+.menu-items li {
+  position: relative;
+  list-style: none;
+}
+
+.menu-items a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 22px;
+  transition: font-size 0.3s ease-in-out;
+}
+
+/* Hide text when collapsed */
+.item-name {
+  opacity: 0;
+  width: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* Show text on hover */
+aside:hover .item-name {
+  opacity: 1;
+  width: auto;
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  left: var(--collapsed-width);
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(22, 22, 22, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+/* Show tooltip only when sidebar is collapsed */
+aside:not(:hover) .menu-items a:hover + .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Adjust main content when sidebar expands */
+main {
+  position: relative;
+  left: var(--collapsed-width);
+  width: calc(100% - var(--collapsed-width));
+  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+  padding: 20px;
+  color: white;
+}
+
+/* Adjust main content when sidebar expands */
+aside:hover ~ main {
+  left: var(--menu-width);
+  width: calc(100% - var(--menu-width));
+}
+.request-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 750px;
+    border: 1px solid #ddd;
+    direction: rtl;
+}
+
+/* Left Side (Delete + Status) */
+.request-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #777;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+/* Status */
+.status-complete {
+    font-size: 14px;
+    color: #008000;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.status-pindding {
+    font-size: 14px;
+    color: #d38945;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: green;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.statuspindding-dot {
+    width: 8px;
+    height: 8px;
+    background: #d38945;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Center - Date Info */
+.request-center {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Actions (Three Gray Boxes) */
+.request-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.action-btn {
+    background: #888;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background: #666;
+}
+
+/* Right Side - Title */
+.request-right {
+    text-align: right;
+}
+
+.request-right h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.request-right p {
+    color: #555;
+    margin: 5px 0;
+}

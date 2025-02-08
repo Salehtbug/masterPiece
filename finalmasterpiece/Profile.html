@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ملف التعريف</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="CSS/profile.css">
+</head>
+
+<body>
+    
+    <body>
+    
+          <!-- Header Section -->
+    <header class="profile-header">
+        <button class="close-btn">×</button>
+        <img src="images/Tarjim_SignUp-removebg-preview.png" alt="ترجم" class="header-logo">
+    </header><br>
+ <!-- Profile Section -->
+ <section class="profile-section">
+    <button class="edit-btn" onclick="openModal()">تعديل</button>
+    
+    <div class="profile-info">
+        <h3>محمد أحمد <span>(مؤسسة)</span></h3>
+        <p class="rating-score">⭐ 4/5</p>
+        <p class="location">📍 عمان - الأردن</p>
+    </div>
+
+    <div class="profile-pic-container">
+        <img src="images/profile-placeholder.png" alt="الصورة الشخصية" class="profile-pic">
+    </div>
+</section>
+    
+    <section class="reviews-section">
+        <h3 class="reviews-title">تقييماتك وعلاقتك مع المترجمين</h3>
+        <span class="overall-rating">⭐ <strong>4.5/5</strong></span>
+    
+        <div class="review-card">
+            <span class="rating">⭐ <strong>4/5</strong></span>
+            <div class="review-content">
+                <h4>محمد محمود</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper massa vitae dui rhoncus, et consectetur orci fermentum. Nullam nisl lorem, vehicula id semper quis, ultrices vitae nulla. Aliquam.</p>
+            </div>
+            <div class="reviewer-avatar"></div>
+        </div>
+    
+        <div class="review-card">
+            <span class="rating">⭐ <strong>4/5</strong></span>
+            <div class="review-content">
+                <h4>محمد محمود</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper massa vitae dui rhoncus, et consectetur orci fermentum. Nullam nisl lorem, vehicula id semper quis, ultrices vitae nulla. Aliquam.</p>
+            </div>
+            <div class="reviewer-avatar"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Logo -->
+          <div class="footer-logo">
+            <img src="images/footer-logo.png" alt="Tarjim Logo">
+          </div>
+          <!-- Small Text -->
+          <div class="footer-text">
+            <p>
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+              sintelit officia consequat.
+            </p>
+          </div>
+          <!-- Social Links -->
+          <div class="footer-social">
+            <h3>Connect with us</h3>
+            <div class="social-icons">
+              <i class="fab fa-facebook-f icon"></i>
+              <i class="fab fa-twitter icon"></i>
+              <i class="fab fa-instagram icon"></i>
+              <i class="fab fa-linkedin-in icon"></i>
+            </div>
+    
+          </div>
+        </div>
+        </div>
+      </footer>
+
+     <!-- Edit Profile Popup Modal -->
+<div id="editProfileModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="input-group">
+            <label for="fullName">الاسم الثنائي</label>
+            <input type="text" id="fullName" class="text-input" name="fullName" placeholder="أدخل الاسم" required>
+        </div>
+
+        <div class="input-group">
+            <label for="userType">هل أنت</label>
+            <select id="userType" class="dropdown-field" required>
+                <option value="" disabled selected>اختر</option>
+                <option value="فرد">فرد</option>
+                <option value="شركة">شركة</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="country">بلد الإقامة</label>
+            <select id="country" class="dropdown-field" required onchange="updateProvinces()">
+                <option value="" disabled selected>اختر البلد المقيم فيها</option>
+                <option value="السعودية">السعودية</option>
+                <option value="مصر">مصر</option>
+                <option value="الإمارات">الإمارات</option>
+                <option value="الكويت">الكويت</option>
+                <option value="الأردن">الأردن</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="province">المحافظة</label>
+            <select id="province" class="dropdown-field" required>
+                <option value="" disabled selected>اختر المحافظة المقيم فيها</option>
+            </select>
+        </div>
+
+            <button type="submit" class="save-btn">حفظ التعديلات</button>
+        </form>
+    </div>
+</div>
+
+    
+
+    
+      <script src="js/profile.js"></script>
+
+</body>
+
+</html>

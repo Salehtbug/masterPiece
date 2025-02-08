@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/dashboard.css">
+</head>
+
+<body>
+    <aside>
+        <div class="logo">
+            <img src="images/loginlogoremback.png" alt="logo">
+        </div>
+        <div class="separator"></div>
+        <ul class="menu-items">
+            <li><a href="#"><span class="icon fa fa-house"></span><span class="item-name">البحث عن وظائف</span></a><span
+                    class="tooltip">الكل</span></li>
+            <li><a href="#"><span class="icon fa fa-layer-group"></span><span class="item-name">قيد
+                        التنفيذ</span></a><span class="tooltip">قيد التنفيذ</span></li>
+            <li><a href="#"><span class="icon fa fa-chart-line"></span><span class="item-name">مكتمل</span></a><span
+                    class="tooltip">مكتمل</span></li>
+            <li><a href="#"><span class="icon fa fa-chart-simple"></span><span
+                        class="item-name">الأحصائيات</span></a><span class="tooltip">لم يقبل بعد</span></li>
+            <li><a href="#"><span class="icon fa fa-user"></span><span class="item-name">الرسائل</span></a><span
+                    class="tooltip">الرسائل</span></li>
+            <li><a href="#"><span class="icon fa fa-gear"></span><span class="item-name">الإعدادات</span></a><span
+                    class="tooltip">الإعدادات</span></li>
+        </ul>
+
+        <!-- <div class="sidebar-button">
+            <button class="new-job-btn">نشر وظيفة جديدة</button>
+        </div> -->
+    </aside>
+    <main class="Contact">
+        <div class="user--info">
+            <div class="search--box">
+                <i class="fa solid fa-search"></i>
+                <input type="text" class="search--box" placeholder="Search" />
+            </div>
+            <div class="user-profile">
+                <span class="username">مرحبا, أحمد</span>
+                <img src="profile.jpg" alt="User Profile" class="profile-pic">
+            </div>
+        </div>
+
+        <br>
+        <div>
+            <div class="request-card">
+                <div class="request-left">
+                    <span class="status-complete">قبول <span class="status-dot"></span></span>
+                </div>
+                <div class="request-center">
+                    <p>العسر 3JOD</p>
+                </div>
+                <div class="request-center">
+                    <p>تاريخ النشر: 05/02/2025</p>
+                </div>
+                <div class="request-actions">
+                    <button class="action-btn"></button>
+                    <button class="action-btn"></button>
+                    <button class="action-btn"></button>
+                </div>
+
+                <div class="request-right">
+                    <h3>طلب رقم 1</h3>
+                    <p>ترجمة شهادة خبرة</p>
+                </div>
+            </div><br>
+            <div class="request-card">
+                <div class="request-left">
+                    <button class="status-complete" id="openFormBtn"><i class="fa-solid fa-check"></i></button>
+                    <div id="formPopup" class="popup">
+                        <div class="popup-content">
+                            <span id="closeFormBtn" class="close">&times;</span>
+                            <h2>قبول وظيفة</h2>
+                            <form>
+                                <label for="name">المبلغ</label>
+                                <input type="number" id="name" name="name" required>
+                
+                                <label for="email">ملاحظات</label>
+                                <input type="text" id="email" name="email" required>
+                
+                                <button type="submit"><a href="dashboardadmin.html">قبول</a></button>
+                            </form>
+                        </div>
+                    </div>
+                    <span class="status-pindding">قيد الانتظار <span class="status-pindding"></span></span>
+                </div>
+                <div class="request-center">
+                    <p>العسر 3JOD</p>
+                </div>
+                <div class="request-center">
+                    <p>تاريخ النشر: 14/02/2025</p>
+                </div>
+
+                <div class="request-actions">
+                    <button class="action-btn"></button>
+                    <button class="action-btn"></button>
+                    <button class="action-btn"></button>
+                </div>
+
+                <div class="request-right">
+                    <h3>طلب رقم 2</h3>
+                    <p>ترجمة سند اراض</p>
+                </div>
+            </div><br>
+            <div class="request-card">
+                <div class="request-left">
+                    <span class="status-complete">قبول <span class="status-dot"></span></span>
+                </div>
+                <div class="request-center">
+                    <p>العسر 3JOD</p>
+                </div>
+                <div class="request-center">
+                    <p>تاريخ النشر: 20/02/2025</p>
+                </div>
+
+                <div class="request-actions">
+                    <button class="action-btn"></button>
+                    <button class="action-btn"></button>
+                    <button class="action-btn"></button>
+                </div>
+
+                <div class="request-right">
+                    <h3>طلب رقم 3</h3>
+                    <p>ترجمة كتاب</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+    <script>
+                // JavaScript Functionality
+                document.addEventListener('DOMContentLoaded', function () {
+            // Get references to the elements
+            var openFormBtn = document.getElementById('openFormBtn');
+            var formPopup = document.getElementById('formPopup');
+            var closeFormBtn = document.getElementById('closeFormBtn');
+
+            // Open the pop-up when the button is clicked
+            openFormBtn.addEventListener('click', function () {
+                formPopup.style.display = 'flex';
+            });
+
+            // Close the pop-up when the close button is clicked
+            closeFormBtn.addEventListener('click', function () {
+                formPopup.style.display = 'none';
+            });
+
+            // Close the pop-up when clicking outside the form
+            window.addEventListener('click', function (event) {
+                if (event.target === formPopup) {
+                    formPopup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">            
+  <link rel="stylesheet" href="CSS/SignUp.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#" id="signupForm">
+          <h1>إنشاء حساب</h1>
+          <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>أو استخدم بريدك الإلكتروني للتسجيل</span>
+          <input type="text" placeholder="الأسم الثنائي" />
+          <input type="email" placeholder="وصف الخدمة" />
+          <button type="button" onclick="changeSignupContent()">التالي</button>
+      </form>
+    </div>
+  
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>تسجيل الدخول</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a> 
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>!أستعمل حسابك</span>
+        <input type="email" placeholder="البريد الإلكتروني" />
+        <input type="password" placeholder="كلمة السر" />
+        <a href="#">نسيت كلمة السر؟</a>
+        <button><a href="dashboardadmin.html">تسجيل الدخول</a></button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+        <img src="images/loginlogoremback.png" alt="logo">
+          <p>للبقاء على اتصال دائم معنا يرجى تسجيل الدخول بمعلوماتك الشخصية</p>
+          <button class="ghost" id="signIn">تسجيل الدخول</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <img src="images/loginlogoremback.png" alt="logo">
+          <p>أدخِل بياناتك الشخصية وابدأ رحلتك معنا</p>
+          <button class="ghost" id="signUp">سجل الآن</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/SignUp.js"></script>
+</body>
+</html>

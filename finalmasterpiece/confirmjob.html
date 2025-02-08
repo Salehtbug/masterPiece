@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>تأكيد الطلب</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="css/confirm.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Header Section -->
+        <header class="header">
+            <img src="images/Tarjim_SignUp-removebg-preview.png" alt="Logo" class="logo">
+            <h1>نشر وظيفة جديدة</h1>
+
+            <!-- Step Progress -->
+            <div class="step-progress">
+                <div class="step filled">
+                    <div class="circle"></div>
+                    <p>معلومات الوظيفة</p>
+                </div>
+                <div class="line"></div>
+                <div class="step filled">
+                    <div class="circle"></div>
+                    <p>معلومات الدفع</p>
+                </div>
+                <div class="line"></div>
+                <div class="step active">
+                    <div class="circle"></div>
+                    <p>التأكيد</p>
+                </div>
+            </div>            
+        </header>
+
+        <!-- Confirmation Section -->
+        <section class="confirmation-section">
+            <h2>معلومات الطلب للتأكيد</h2>
+
+            <!-- Job Details -->
+            <div class="job-details">
+                <div class="image-preview">
+                    <img src="images/placeholder.png" alt="File Preview">
+                    <img src="images/placeholder.png" alt="File Preview">
+                    <img src="images/placeholder.png" alt="File Preview">
+                </div>
+                <p><strong>ترجمة شهادة خبرة (رسمية)</strong></p>
+                <p>🇬🇧 الإنجليزية → 🇸🇦 العربية</p>
+                <p>الحد الأدنى للدفع مقابل الخدمة: <strong>7JOD</strong></p>
+                <p>الحد الأعلى للدفع مقابل الخدمة: <strong>12JOD</strong></p>
+                <p>بطاقة الدفع: **** **** **** 9999</p>
+            </div>
+
+            <!-- Notes Section -->
+            <label for="notes">ملاحظاتك:</label>
+            <textarea id="notes" placeholder="هل لديك أي ملاحظات؟"></textarea>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="cancel-btn" onclick="goToPrevious()">الرجوع</button>
+                <button class="confirm-btn" onclick="submitJob()">نشر</button>
+                <button class="cancel-btn" onclick="cancelJob()">إلغاء</button>
+            </div>
+        </section>
+    </div>
+
+<script src="js/confirm.js"></script>
+<script src="js/postjob.js"></script>
+</body>
+</html>

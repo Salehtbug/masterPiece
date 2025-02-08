@@ -1,0 +1,81 @@
+body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    background-color: #C9DDD9;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Step Progress Styling */
+.step-progress {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.step {
+    position: relative;
+    font-size: 18px;
+    color: #4F647A;
+    padding-bottom: 10px;
+}
+
+.step.active {
+    font-weight: bold;
+    color: #1CC59F;
+    border-bottom: 3px solid #1CC59F;
+}
+
+.step.completed {
+    font-weight: bold;
+    color: #4F647A;
+    border-bottom: 3px solid #4F647A;
+}
+
+/* Payment Section */
+.payment-section {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.payment-section label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4F647A;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-section input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.pay-btn {
+    padding: 15px 50px;
+    background-color: #1CC59F;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.pay-btn:hover {
+    background-color: #18a582;
+}
